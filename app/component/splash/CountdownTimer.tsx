@@ -1,0 +1,54 @@
+export default function CountdownTimer({
+  countdown,
+}: {
+  countdown: { hours: number; minutes: number; seconds: number }
+}) {
+  return (
+    <div
+      className="
+        -translate-y-12 md:-translate-y-14 lg:-translate-y-28
+        bg-card
+        rounded-[20px]
+        border border-gray-800
+        opacity-100
+        px-4 py-2
+        flex
+        justify-center
+        w-max
+        mx-auto
+      "
+    >
+      <div className="flex gap-8 md:gap-10 lg:gap-15 h-full">
+        {/* HOURS */}
+        <div className="flex flex-col justify-between h-full text-center">
+          <div className="text-[28px] md:text-[40px] font-extrabold text-white tabular-nums leading-none">
+            {String(countdown.hours).padStart(2, '0')}
+          </div>
+          <div className="text-[9px] md:text-[10px] text-white uppercase tracking-wider font-semibold mt-0.5">
+            HOURS
+          </div>
+        </div>
+
+        {/* MINUTES */}
+        <div className="flex flex-col justify-between h-full text-center">
+          <div className="text-[28px] md:text-[40px] font-extrabold text-white tabular-nums leading-none">
+            {String(countdown.minutes).padStart(2, '0')}
+          </div>
+          <div className="text-[9px] md:text-[10px] text-white uppercase tracking-wider font-semibold mt-0.5">
+            MINUTES
+          </div>
+        </div>
+
+        {/* SECONDS */}
+        <div className="flex flex-col justify-between h-full text-center">
+          <div className="text-[28px] md:text-[40px] font-extrabold text-white tabular-nums leading-none">
+            {String(countdown.seconds).padStart(2, '0')}
+          </div>
+          <div className="text-[9px] md:text-[10px] text-white uppercase tracking-wider font-semibold mt-0.5">
+            SECONDS
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
