@@ -25,7 +25,7 @@ export default function AboutCommitment() {
           </h2>
 
           <p 
-            className="text-gray-700"
+            className="text-gray-600"
             style={{
               fontFamily: "Red Hat Display, sans-serif",
               fontWeight: 400,
@@ -38,9 +38,8 @@ export default function AboutCommitment() {
           </p>
 
           <p 
-            className="text-gray-700"
+            className="text-gray-600"
             style={{
-              fontFamily: "Red Hat Display, sans-serif",
               fontWeight: 400,
               fontSize: "18px",
               lineHeight: "150%",
