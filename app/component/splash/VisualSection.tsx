@@ -9,7 +9,7 @@ export default function VisualSection() {
       <div className="relative flex items-center justify-center min-h-37.5 sm:min-h-62.5 md:min-h-87.5 lg:min-h-112.5">
 
         {/* Rocket Icon */}
-        <div className="absolute left-3 md:left-15 lg:left-30 top-1/2 -translate-y-1/2 z-20
+        <div className="absolute left-3 top-1/3 md:left-20 md:top-1/3 lg:left-32 -translate-y-1/2 z-20
                         w-25 h-25  md:w-50 md:h-50 lg:w-70 lg:h-70">
           <Rocket />
         </div>
@@ -25,13 +25,13 @@ export default function VisualSection() {
         </div>
 
         {/* Gear Left - Background, visible on mobile */}
-        <div className="absolute -left-8 -top-3 md:-left-8 md:-top--7 lg:-left-14 lg:-top-14 z-0 opacity-35">
-          <GearLeft className="w-30 h-30 md:w-60 md:h-60 lg:w-100 lg:h-100 text-brand-cyan" />
+        <div className="absolute -left-10 -top-2 md:-left-8 md:-top--7 lg:-left-16 lg:-top-8 z-0 opacity-35">
+          <GearLeft className="w-45 h-45 md:w-75 md:h-75 lg:w-100 lg:h-100 text-brand-cyan" />
         </div>
 
         {/* Gear Right - Background, visible on mobile */}
-        <div className="absolute -right-8 -bottom--1 md:-left--8 md:-top-2 lg:-right-14 lg:-bottom-14 z-0 opacity-35">
-          <GearRight className="w-30 h-30 md:w-60 md:h-60 lg:w-100 lg:h-100 text-brand-cyan" />
+        <div className="absolute -right-10 -top-2 md:-right-4 md:-top-2 lg:-right-6 lg:-bottom-14 z-0 opacity-35">
+          <GearRight className="w-45 h-45 md:w-75 md:h-75 lg:w-100 lg:h-100 text-brand-cyan" />
         </div>
 
       </div>

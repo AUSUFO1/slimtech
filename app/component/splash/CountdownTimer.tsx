@@ -11,40 +11,40 @@ export default function CountdownTimer({
         rounded-[20px]
         border border-gray-800
         opacity-100
-        px-4 py-2
+        px-6 py-4 md:px-8 md:py-6 lg:px-10 lg:py-8
         flex
         justify-center
         w-max
         mx-auto
       "
     >
-      <div className="flex gap-8 md:gap-10 lg:gap-15 h-full">
+      <div className="flex gap-10 md:gap-12 lg:gap-16 h-full">
         {/* HOURS */}
         <div className="flex flex-col justify-between h-full text-center">
-          <div className="text-[28px] md:text-[40px] font-extrabold text-white tabular-nums leading-none">
+          <div className="text-[40px] md:text-[56px] lg:text-[72px] font-extrabold text-white tabular-nums leading-none">
             {String(countdown.hours).padStart(2, '0')}
           </div>
-          <div className="text-[9px] md:text-[10px] text-white uppercase tracking-wider font-semibold mt-0.5">
+          <div className="text-[11px] md:text-[12px] lg:text-[14px] text-white uppercase tracking-wider font-semibold mt-1 md:mt-2 lg:mt-3">
             HOURS
           </div>
         </div>
 
         {/* MINUTES */}
         <div className="flex flex-col justify-between h-full text-center">
-          <div className="text-[28px] md:text-[40px] font-extrabold text-white tabular-nums leading-none">
+          <div className="text-[40px] md:text-[56px] lg:text-[72px] font-extrabold text-white tabular-nums leading-none">
             {String(countdown.minutes).padStart(2, '0')}
           </div>
-          <div className="text-[9px] md:text-[10px] text-white uppercase tracking-wider font-semibold mt-0.5">
+          <div className="text-[11px] md:text-[12px] lg:text-[14px] text-white uppercase tracking-wider font-semibold mt-1 md:mt-2 lg:mt-3">
             MINUTES
           </div>
         </div>
 
         {/* SECONDS */}
         <div className="flex flex-col justify-between h-full text-center">
-          <div className="text-[28px] md:text-[40px] font-extrabold text-white tabular-nums leading-none">
+          <div className="text-[40px] md:text-[56px] lg:text-[72px] font-extrabold text-white tabular-nums leading-none">
             {String(countdown.seconds).padStart(2, '0')}
           </div>
-          <div className="text-[9px] md:text-[10px] text-white uppercase tracking-wider font-semibold mt-0.5">
+          <div className="text-[11px] md:text-[12px] lg:text-[14px] text-white uppercase tracking-wider font-semibold mt-1 md:mt-2 lg:mt-3">
             SECONDS
           </div>
         </div>

@@ -23,13 +23,10 @@ export default function SplashPage() {
   }, [])
 
   return (
-    // OPTION 1: Remove min-h-screen entirely - content determines height
-    <div className="relative w-full overflow-hidden bg-white">
-      <div className="absolute inset-0 bg-overlay-cyan z-0"></div>
+    <div className="relative w-full min-h-screen overflow-x-hidden bg-overlay-cyan">
       <Header />
 
-      {/* REDUCED PADDING - Changed py-2 sm:py-6 lg:py-6 xl:py-4 to smaller values */}
-      <main className="relative z-10 w-full max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 xl:py-6">
+      <main className="relative z-10 w-full max-w-container mx-auto px-4 sm:px-6 lg:px-8 sm:py-2 lg:py-3">
         <Hero />
         <SearchBar />
         <VisualSection />
