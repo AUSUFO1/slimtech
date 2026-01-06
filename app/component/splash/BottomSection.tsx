@@ -36,17 +36,9 @@ export default function BottomSection({ countdown }: any) {
           </p>
         </div>
 
-        <div className="mt-3 sm:mt-4 text-[10px] sm:text-xs md:text-lg text-slate-600">
-          Program Coordinator:{' '}
-          <a
-            href="https://x.com/jcode_Code"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-brand-cyan hover:underline"
-          >
-            J.code
-          </a>
-        </div>
+        <div className="mt-3 sm:mt-4 font-bold text-slate-600"> <span className="text-base sm:text-base md:text-lg"> Program Coordinator:{' '} </span> 
+        <a href="https://x.com/jcode_Code" target="_blank" rel="noopener noreferrer" className="font-bold 
+        text-base sm:text-base md:text-lg text-brand-cyan underline" > J.code </a> </div>
       </div>
 
       {/* Countdown Timer */}
