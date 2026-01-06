@@ -4,15 +4,14 @@ import ImageFrame from "./ImageFrame";
 
 export default function AboutCommitment() {
   return (
-    <section className="relative w-full max-w-container mx-auto px-5 sm:px-8 lg:px-10 py-16">
+    <section className="relative w-full max-w-container mx-auto px-5 sm:px-8 lg:px-10 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 lg:gap-6 items-center lg:items-start relative">
         
-        {/* Text column - LEFT side */}
-        <div className="space-y-6">
+        
+        <div className="space-y-6 text-left lg:text-left"> 
           <h3
             className="text-brand-cyan font-bold tracking-tight"
             style={{
-              fontFamily: "Red Hat Display, sans-serif",
               fontSize: "20px",
               lineHeight: "150%",
               letterSpacing: "-0.01em",
@@ -21,7 +20,7 @@ export default function AboutCommitment() {
             Our commitment to you
           </h3>
 
-          <h2 className="text-3xl md:text-5xl font-bold text-brand-dark leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-brand-dark leading-tight">
             At Slim Mentorship, our mission is simple and deliberate
           </h2>
 
