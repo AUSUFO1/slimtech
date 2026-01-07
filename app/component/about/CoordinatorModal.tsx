@@ -6,33 +6,34 @@ export default function CoordinatorModal() {
   return (
     <div
       className="
-        absolute
+        relative
         bg-white
         shadow-md
-        rounded-[18.45px]
+        rounded-xl
+        sm:rounded-[18.45px]
         flex flex-col
-        gap-[14.76px]
+        gap-3
+        sm:gap-[14.76px]
+        w-45
+        sm:w-[220.98px]
+        p-5
+        sm:pt-[25.82px]
+        sm:pr-[25.45px]
+        sm:pb-[25.82px]
+        sm:pl-[20.45px]
       "
-      style={{
-        width: "220.98px",
-        top: "371.03px",
-        paddingTop: "25.82px",
-        paddingRight: "25.45px",
-        paddingBottom: "25.82px",
-        paddingLeft: "20.45px",
-      }}
     >
       {/* Quote text */}
-      <p className="text-[12px] text-gray-600 leading-snug">
-        “Slim Mentorship was born from a simple realization: interest in tech is
+      <p className="text-[11px] sm:text-[13px] text-gray-600 leading-snug">
+        "Slim Mentorship was born from a simple realization: interest in tech is
         everywhere, but structured guidance is not. We built this program to
         remove confusion, focus learning, and help people develop skills that
-        matter in the real world.”
+        matter in the real world."
       </p>
 
       {/* Coordinator info */}
-      <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full overflow-hidden shrink-0">
+      <div className="flex items-center gap-2 sm:gap-3">
+        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full overflow-hidden shrink-0">
           <Image
             src="/images/about/jcode.jpg"
             alt="J.code Program Coordinator"
@@ -43,10 +44,10 @@ export default function CoordinatorModal() {
         </div>
 
         <div className="flex flex-col leading-tight">
-          <span className="text-sm font-bold text-gray-600">
+          <span className="text-xs sm:text-sm font-bold text-gray-600">
             J.code
           </span>
-          <span className="text-sm font-bold text-nowrap text-gray-600">
+          <span className="text-xs sm:text-sm font-bold text-nowrap text-gray-600">
             Program Coordinator
           </span>
         </div>

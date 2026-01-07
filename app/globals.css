@@ -5,11 +5,12 @@
   --color-brand-cyan: #0ca5d6;
   --color-brand-dark: #00030c;
   --color-accent-yellow: #f4b740;
+  --color-brand-hover: #1E1E1E:
 
   /* BACKGROUND & UI COLORS */
   --color-overlay-cyan: #0ca5d64d;
   --color-dark: #1a1a2e;
-  --color-card: #0d0d1f;
+  --color-card: #0d0d1f; 
 
   /* GRAY SCALE */
   --color-gray-50: #f9fafb;

@@ -14,10 +14,16 @@ export default function ImageFrame({ src, alt }: Props) {
         relative
         w-full
         max-w-full
-        aspect-[400/450]
+        aspect-400/450
         overflow-hidden
         rounded-2xl
-        sm:w-[357px] sm:h-[383px] sm:aspect-auto
+        sm:w-89.25 
+        sm:h-95.75 
+        sm:aspect-auto
+        md:w-105
+        md:h-112.5
+        lg:w-120
+        lg:h-128.75
       "
     >
       <Image
@@ -27,8 +33,9 @@ export default function ImageFrame({ src, alt }: Props) {
         className="object-cover"
         priority
         sizes="(max-width: 640px) 100vw,
-               (max-width: 1024px) 50vw,
-               357px"
+               (max-width: 768px) 357px,
+               (max-width: 1024px) 420px,
+               480px"
       />
     </div>
   );

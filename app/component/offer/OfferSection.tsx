@@ -47,12 +47,12 @@ const OfferSection = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   return (
-    <section className="max-w-container mx-auto py-12 px-4 bg-[#F5F5F5]">
+    <section className="max-w-container mx-auto py-6 px-4 bg-[#F5F5F5]">
       {/* Headers */}
       <h3 className="font-red-hat font-bold text-[20px] leading-[150%] text-center text-brand-cyan">
         What We Offer
       </h3>
-      <h2 className="font-red-hat font-bold text-[32px] md:text-[48px] leading-[100%] text-center text-brand-dark mt-4">
+      <h2 className="font-red-hat font-bold text-[24px] md:text-[36px] lg:text-[48px]   leading-[100%] text-center text-brand-dark mt-4">
         Why SlimTech Mentorship is Different?
       </h2>
 

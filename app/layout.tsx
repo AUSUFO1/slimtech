@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/app/component/splash/Header";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,12 +32,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased h-full overflow-y-auto`}
       >
-        <Header />
-        {children}
+        <div className="relative min-h-screen">
+          <Header />
+          <main className="relative">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

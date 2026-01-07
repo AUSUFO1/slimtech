@@ -1,4 +1,3 @@
-// app/components/about/CyanStatsBadge.tsx
 "use client";
 
 import Image from "next/image";
@@ -37,8 +36,7 @@ export default function CyanStatsBadge({ className = "" }: Props) {
         2k+ Registered users
       </div>
 
-      {/* Avatars row (4 png images first, then plus icon last) */}
-      <div className="flex items-center gap-[4px]">
+      <div className="flex items-center gap-1">
         {/* User images */}
         <span className="inline-flex h-6 w-6 overflow-hidden rounded-full ring-1 ring-white/30">
           <Image
@@ -78,7 +76,6 @@ export default function CyanStatsBadge({ className = "" }: Props) {
           />
         </span>
 
-        {/* Plus icon circle - NOW LAST */}
         <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white">
           <Plus className="w-3.5 h-3.5 text-brand-dark" strokeWidth={2.5} />
         </span>

@@ -7,8 +7,7 @@ export default function AboutCommitment() {
     <section className="relative w-full max-w-container mx-auto px-5 sm:px-8 lg:px-10 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 lg:gap-6 items-center lg:items-start relative">
         
-        
-        <div className="space-y-6 text-left lg:text-left"> 
+        <div className="space-y-6 lg:mt-20 text-left lg:text-left"> 
           <h3
             className="text-brand-cyan font-bold tracking-tight"
             style={{
@@ -24,33 +23,15 @@ export default function AboutCommitment() {
             At Slim Mentorship, our mission is simple and deliberate
           </h2>
 
-          <p 
-            className="text-gray-600"
-            style={{
-              fontFamily: "Red Hat Display, sans-serif",
-              fontWeight: 400,
-              fontSize: "18px",
-              lineHeight: "150%",
-              letterSpacing: "-0.01em",
-            }}
-          >
+          <p className="text-gray-600 md:text-lg leading-relaxed tracking-tight">
             We help new tech professionals and aspirants stay consistent, focused, and supported throughout their job search, while significantly reducing the time it typically takes to get hired.
           </p>
 
-          <p 
-            className="text-gray-600"
-            style={{
-              fontWeight: 400,
-              fontSize: "18px",
-              lineHeight: "150%",
-              letterSpacing: "-0.01em",
-            }}
-          >
+          <p className="text-gray-600 md:text-lg leading-relaxed tracking-tight">
             Through mentorship, practical experience, and clear guidance, we help you stand out and improve your chances of landing real opportunities.
           </p>
         </div>
 
-        {/* Image column - RIGHT side */}
         <div className="relative w-full flex flex-col justify-center md:items-center lg:items-center">
           <ImageFrame
             src="/images/about/about2.jpg"
