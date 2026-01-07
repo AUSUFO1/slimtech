@@ -1,6 +1,8 @@
 import Hero from "@/app/component/home/Hero";
 import AboutSection from "@/app/component/about/AboutSection";
 import OfferSection from "../component/offer/OfferSection";
+import CourseTracksSection from "../component/course/CourseSection";
+import ProgramSection from "../component/program/ProgramSection";
 import FaqSection from "../component/faqs/FaqSection";
 import Footer from "../footer/Footer";
 export default function Home() {
@@ -9,6 +11,8 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <OfferSection />
+      <CourseTracksSection/>
+      <ProgramSection />
       <FaqSection />
       <Footer />
 
