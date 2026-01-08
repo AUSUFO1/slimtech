@@ -10,14 +10,14 @@ interface CourseCardProps {
 
 export default function CourseTracksSection() {
   const courses = [
-    { title: "ARTIFICIAL INTELLIGENCE", image: "/images/courses/ai.JPEG" },
-    { title: "FRONTEND ENGINEERING", image: "/images/courses/frontend.JPEG", isCenterCard: true },
-    { title: "GRAPHICS DESIGN", image: "/images/courses/graphics.JPEG" },
-    { title: "UI/UX DESIGN", image: "/images/courses/uiux.JPEG" },
-    { title: "BACKEND ENGINEERING", image: "/images/courses/backend.JPEG", isCenterCard: true },
-    { title: "DATA ANALYTICS", image: "/images/courses/data-analytics.JPEG" },
-    { title: "VIRTUAL ASSISTANCE", image: "/images/courses/virtual-assistance.JPEG" },
-    { title: "MOBILE APP DEVELOPMENT", image: "/images/courses/mobile.JPEG" },
+    { title: "ARTIFICIAL INTELLIGENCE", image: "/images/courses/ai.jpeg" },
+    { title: "FRONTEND ENGINEERING", image: "/images/courses/frontend.jpeg", isCenterCard: true },
+    { title: "GRAPHICS DESIGN", image: "/images/courses/graphics.jpeg" },
+    { title: "UI/UX DESIGN", image: "/images/courses/uiux.jpeg" },
+    { title: "BACKEND ENGINEERING", image: "/images/courses/backend.jpeg", isCenterCard: true },
+    { title: "DATA ANALYTICS", image: "/images/courses/data-analytics.jpeg" },
+    { title: "VIRTUAL ASSISTANCE", image: "/images/courses/virtual-assistance.jpeg" },
+    { title: "MOBILE APP DEVELOPMENT", image: "/images/courses/mobile.jpeg" },
   ];
 
   return (

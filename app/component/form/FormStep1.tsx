@@ -38,7 +38,7 @@ export default function FormStep1({
         </label>
         <input
           type="text"
-          placeholder="John Maly"
+          placeholder="John Mary"
           value={formData.fullName}
           onChange={(e) => onInputChange("fullName", e.target.value)}
           required
@@ -53,7 +53,7 @@ export default function FormStep1({
         </label>
         <input
           type="text"
-          placeholder="John Maly"
+          placeholder="John Mary"
           value={formData.twitterHandle}
           onChange={(e) => onInputChange("twitterHandle", e.target.value)}
           className="w-full px-4 py-3 bg-[#F5F5F5] border-[0.7px] border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
@@ -86,6 +86,7 @@ export default function FormStep1({
           value={formData.phone}
           onChange={(value) => onInputChange("phone", value || "")}
           className="phone-input-custom"
+          required
         />
       </div>
 
@@ -95,6 +96,7 @@ export default function FormStep1({
           Country of Residence
         </label>
         <Select
+          instanceId="country-select"
           options={countryOptions}
           value={
             countryOptions.find((option) => option.value === formData.country) ||
@@ -105,6 +107,7 @@ export default function FormStep1({
           isSearchable
           className="react-select-container"
           classNamePrefix="react-select"
+          required
           styles={{
             control: (base) => ({
               ...base,
@@ -115,6 +118,14 @@ export default function FormStep1({
               borderRadius: "0.5rem",
               "&:hover": {
                 borderColor: "#d1d5db",
+              },
+            }),
+            option: (base, state) => ({
+              ...base,
+              backgroundColor: state.isFocused ? "#F5F5F5" : "white",
+              color: "#000",
+              "&:active": {
+                backgroundColor: "#F5F5F5",
               },
             }),
             menu: (base) => ({
@@ -130,16 +141,48 @@ export default function FormStep1({
         <label className="block text-sm font-medium text-white md:text-gray-700 mb-2">
           Gender
         </label>
-        <select
-          value={formData.gender}
-          onChange={(e) => onInputChange("gender", e.target.value)}
+        <Select
+          instanceId="gender-select"
+          options={[
+            { value: "male", label: "Male" },
+            { value: "female", label: "Female" }
+          ]}
+          value={
+            formData.gender
+              ? { value: formData.gender, label: formData.gender.charAt(0).toUpperCase() + formData.gender.slice(1) }
+              : null
+          }
+          onChange={(option) => onInputChange("gender", option?.value || "")}
+          placeholder="Select gender"
+          className="react-select-container"
+          classNamePrefix="react-select"
           required
-          className="w-full px-4 py-3 bg-[#F5F5F5] border-[0.7px] border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none appearance-none"
-        >
-          <option value="">Select gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
+          styles={{
+            control: (base) => ({
+              ...base,
+              padding: "0.375rem",
+              backgroundColor: "#F5F5F5",
+              borderColor: "#d1d5db",
+              borderWidth: "0.7px",
+              borderRadius: "0.5rem",
+              "&:hover": {
+                borderColor: "#d1d5db",
+              },
+            }),
+            option: (base, state) => ({
+              ...base,
+              backgroundColor: state.isFocused ? "#F5F5F5" : "white",
+              color: "#000",
+              "&:active": {
+                backgroundColor: "#F5F5F5",
+              },
+            }),
+            menu: (base) => ({
+              ...base,
+              zIndex: 100,
+            }),
+          }}
+        />
       </div>
 
       {/* Next Button */}
