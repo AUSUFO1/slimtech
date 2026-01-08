@@ -42,7 +42,7 @@ export default function CourseTracksSection() {
 
         {/* Course Grid - Simple grid for mobile/tablet, Figma layout for desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-6">
-          {courses.map((course, index) => {
+          {courses.map((course) => {
             // Push Mobile App Development to the right on large screens
             const isMobileApp = course.title === "MOBILE APP DEVELOPMENT";
             
@@ -115,9 +115,9 @@ function CourseCard({ title, image, isCenterCard = false, className = "" }: Cour
 
       {/* Apply Now Button */}
       <div className="p-4 sm:p-5 flex justify-center">
-        <Button className="w-auto min-w-35">
-          Apply Now!
-        </Button>
+        <Button navigateTo="/form" className="w-auto min-w-35">
+  Apply Now!
+</Button>
       </div>
     </div>
   );

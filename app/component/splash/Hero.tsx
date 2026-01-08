@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="text-center mb-4 sm:mb-6 lg:mb-8">
+    <section className="text-center mt-20 mb-4 sm:mb-6 lg:mb-8">
       <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-black mb-2 sm:mb-3 lg:mb-4 leading-tight">
         We Are Launching Soon!
       </h1>

@@ -182,7 +182,7 @@ export default function FormStep2({
                 type="checkbox"
                 checked={formData.howDidYouHear.includes(option)}
                 onChange={() => onCheckboxChange(option)}
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                className="w-4 h-4 text-blue-600 border-gray-700 md:border-gray-300  rounded focus:ring-blue-500"
               />
               <span className="ml-2 text-sm text-white md:text-gray-700">
                 {option}

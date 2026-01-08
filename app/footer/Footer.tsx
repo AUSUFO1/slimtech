@@ -1,10 +1,49 @@
 "use client";
+import { useState } from "react";
 import FooterIllustration from "./FooterIllustration"; 
 import Logo from "../component/icon/Logo";
 import LogoSmall from "../component/icon/LogoSmall";
 import Button from "../component/common/Button";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpqwvjav", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, subscriptionType: "Newsletter" }),
+      });
+
+      if (response.ok) {
+        setShowSuccess(true);
+        setEmail("");
+        setTimeout(() => setShowSuccess(false), 3000);
+      } else {
+        alert("Failed to subscribe. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer className="relative w-full -mt-15 bg-brand-dark overflow-hidden">
       {/* Background Airplane Icons */}
@@ -38,18 +77,28 @@ export default function Footer() {
                 Join our community of techies and receive regular updates on the latest tech trends, news, courses, and special promotions. Don't miss out on the opportunity to level up your tech skills and achieve your goals.
               </p>
               
+              {/* Success Message */}
+              {showSuccess && (
+                <div className="text-brand-cyan font-semibold text-sm">
+                  ✓ Subscribed successfully!
+                </div>
+              )}
+              
               {/* Email Input & Button */}
-              <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 h-12 py-3 px-5 rounded-full bg-transparent border border-accent-yellow text-white placeholder-gray-400 focus:outline-none focus:border-brand-cyan transition-colors"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={isSubmitting}
+                  className="flex-1 h-12 py-3 px-5 rounded-full bg-transparent border border-accent-yellow text-white placeholder-gray-400 focus:outline-none focus:border-brand-cyan transition-colors disabled:opacity-50"
                   style={{ maxWidth: '359px' }}
                 />
-                <Button className="whitespace-nowrap">
-                  Subscribe
+                <Button type="submit" className="whitespace-nowrap" disabled={isSubmitting}>
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </Button>
-              </div>
+              </form>
               
               {/* Terms Text */}
               <a href="#terms" className="text-xs text-white underline hover:text-brand-cyan transition-colors block" > By clicking Subscribe you're confirming that you agree with our Terms and Conditions </a>

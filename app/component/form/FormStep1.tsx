@@ -33,7 +33,7 @@ export default function FormStep1({
     >
       {/* Full Name */}
       <div>
-        <label className="block text-sm font-medium text-white md:text-gray-700 mb-2">
+        <label className="block text-sm font-medium  text-white md:text-gray-700 mb-2">
           Full Name
         </label>
         <input
@@ -67,7 +67,7 @@ export default function FormStep1({
         </label>
         <input
           type="email"
-          placeholder="John.Maly@gmail.com"
+          placeholder="John.Mary@gmail.com"
           value={formData.email}
           onChange={(e) => onInputChange("email", e.target.value)}
           required

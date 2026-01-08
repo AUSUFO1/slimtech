@@ -1,20 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import Button from "../common/Button"; 
+import Button from "../common/Button";
 
 export default function Hero() {
   return (
     <section
       className="
-        relative w-full
+        relative
+        w-full
         min-h-100 sm:min-h-175
         flex items-center justify-center
-        overflow-hidden
+        mt-10 lg:mt-22
       "
     >
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <Image
           src="/images/hero.jpg"
           alt="Hero background"
@@ -24,7 +25,9 @@ export default function Hero() {
           sizes="(max-width: 640px) 500px,
                  (max-width: 1024px) 700px,
                  1440px"
+        
         />
+
         {/* Gradient Overlay */}
         <div
           className="absolute inset-0"
@@ -36,7 +39,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative lg:-mt-15 z-10 text-center max-w-container px-6">
+      <div className="relative z-10 text-center max-w-container px-6">
         <h1 className="text-2xl md:text-5xl font-bold text-white leading-tight">
           We Don’t Just Train You.
           <br />
@@ -51,8 +54,7 @@ export default function Hero() {
 
         {/* CTA Button */}
         <div className="mt-6 flex justify-center">
-          <Button>Catch a flight here</Button>
-        </div>
+ <Button navigateTo="/form">Catch a flight here</Button>        </div>
       </div>
     </section>
   );

@@ -152,7 +152,7 @@ export default function EnrollmentForm() {
           {/* Form Content */}
           <div className="relative z-10 w-full max-w-md p-8 md:p-0 my-8">
             {/* Header */}
-            <div className="flex justify-between items-center mb-8">
+            <div className="flex justify-between items-center mt-10 mb-8">
               <h2 className="text-2xl lg:text-3xl font-bold text-white md:text-gray-900">
                 Let's get you boarded
               </h2>

@@ -37,7 +37,7 @@ export default function FaqActionModal() {
       </p>
 
       {/* Action Button */}
-      <Button>Catch a flight here</Button>
+      <Button navigateTo="/form">Catch a flight here</Button>
     </section>
   );
 }
