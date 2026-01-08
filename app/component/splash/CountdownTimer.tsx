@@ -9,7 +9,7 @@ export default function CountdownTimer({
   } 
 }) {
   return (
-    <div className="-translate-y-12 md:-translate-y-14 lg:-translate-y-28 bg-card rounded-[20px] border border-gray-800 opacity-100 px-6 py-4 md:px-8 md:py-6 lg:px-10 lg:py-8 flex justify-center w-max mx-auto">
+    <div className="-translate-y-12 md:-translate-y-10 lg:-translate-y-28 bg-card rounded-[20px] border border-gray-800 opacity-100 px-6 py-4 md:px-8 md:py-10 lg:px-10 lg:py-8 flex justify-center w-max mx-auto">
       <div className="flex gap-8 md:gap-10 lg:gap-12 h-full">
         
         {/* DAYS */}

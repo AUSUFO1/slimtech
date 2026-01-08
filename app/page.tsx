@@ -47,7 +47,7 @@ export default function SplashPage() {
   }
 
   return (
-    <div className="relative w-full min-h-screen overflow-x-hidden bg-overlay-cyan">
+    <div className="relative w-full min-h-screen overflow-x-hidden bg-cyan-500/10">
       <main className="relative z-10 w-full max-w-container mx-auto px-4 sm:px-6 lg:px-8 sm:py-2 lg:py-3">
         <Hero />
         <SearchBar />
