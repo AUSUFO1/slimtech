@@ -30,6 +30,11 @@ export default function FormStep2({
     { value: "no", label: "No" }
   ];
 
+  const handleTrackSelection = (track: string) => {
+    // Clear all tracks and set only the selected one
+    onInputChange("interestedTracks", track);
+  };
+
   return (
     <div className="space-y-6">
       {/* Prior Experience */}
@@ -139,11 +144,12 @@ export default function FormStep2({
         />
       </div>
 
-      {/* Which Track Are You Interested In */}
+      {/* Which Track Are You Interested In - RADIO BUTTONS (Single Selection) */}
       <div>
         <label className="block text-sm font-medium text-white md:text-gray-700 mb-3">
-          Which Track Are You Interested In?
+          Which Track Are You Interested In? <span className="text-red-500">*</span>
         </label>
+        <p className="text-xs text-white md:text-gray-600 mb-3">Please select ONE track only</p>
         <div className="space-y-2">
           {[
             "Frontend Engineering",
@@ -157,10 +163,12 @@ export default function FormStep2({
           ].map((track) => (
             <label key={track} className="flex items-center cursor-pointer">
               <input
-                type="checkbox"
-                checked={formData.interestedTracks.includes(track)}
-                onChange={() => onTrackCheckboxChange(track)}
-                className="w-4 h-4 text-gray-600 border-gray-300 rounded focus:ring-blue-500"
+                type="radio"
+                name="track"
+                checked={formData.interestedTracks[0] === track}
+                onChange={() => handleTrackSelection(track)}
+                className="w-4 h-4 text-accent-yellow border-gray-300 focus:ring-accent-yellow"
+                required
               />
               <span className="ml-2 text-sm text-white md:text-gray-700">
                 {track}

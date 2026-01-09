@@ -13,8 +13,8 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: hasLaunched ? '/' : '/home', // After launch, allow everything
       disallow: hasLaunched 
-        ? ['/api/', '/_next/'] // After launch: block only internal routes
-        : ['/', '/api/', '/_next/'], // Before launch: block countdown page too
+        ? ['/api/', '/payment/','/_next/'] // After launch: block only internal routes
+        : ['/', '/api/', '/payment/', '/_next/'], // Before launch: block countdown page too
     },
     sitemap: `${baseUrl}/sitemap.xml`,
   }
