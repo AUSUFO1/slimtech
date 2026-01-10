@@ -15,11 +15,11 @@ function PaymentSuccess({ onClose }: PaymentSuccessProps) {
         <CheckCircle className="w-10 h-10 text-green-500" />
       </div>
 
-      <h2 className="text-2xl font-bold text-white md:text-gray-900 mb-2">
+      <h2 className="text-2xl font-bold text-gray-700 mb-2">
         Payment Successful
       </h2>
 
-      <p className="text-xl md:text-4xl font-bold text-white md:text-gray-900 my-6 px-4">
+      <p className="text-xl md:text-4xl font-bold text-gray-9=700 my-6 px-4">
         Welcome Onboard • Fasten Your Seatbelt
       </p>
 
@@ -40,10 +40,10 @@ function PaymentFailed({ onRetry, onClose }: { onRetry: () => void; onClose: () 
         <XCircle className="w-10 h-10 text-red-500" />
       </div>
 
-      <h1 className="text-2xl font-bold text-white md:text-gray-900 mb-2">
+      <h1 className="text-2xl font-bold md:text-gray-700 mb-2">
         Payment Failed
       </h1>
-      <p className="mt-4 px-4 text-white md:text-gray-700">
+      <p className="mt-4 px-4  md:text-gray-700">
         Something went wrong. Please try again or contact support.
       </p>
 
@@ -72,10 +72,10 @@ function PaymentPending({ onRetry, onClose }: { onRetry: () => void; onClose: ()
         <Clock className="w-10 h-10 text-yellow-500" />
       </div>
 
-      <h1 className="text-2xl font-bold text-white md:text-gray-900 mb-2">
+      <h1 className="text-2xl font-bold text-gray-700 mb-2">
         Payment Pending
       </h1>
-      <p className="mt-4 px-4 text-white md:text-gray-700">
+      <p className="mt-4 px-4 text-gray-700">
         Your payment is being processed. This may take a few moments.
       </p>
 
