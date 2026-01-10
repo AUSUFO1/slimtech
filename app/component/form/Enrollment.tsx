@@ -44,7 +44,6 @@ export default function EnrollmentForm() {
     howDidYouHear: [],
   });
 
-  // Get all countries
   useEffect(() => {
     const countryNames = getNames();
     const options = countryNames.map((country) => ({
@@ -54,7 +53,6 @@ export default function EnrollmentForm() {
     setCountryOptions(options);
   }, []);
 
-  // Auto-advance slider every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
@@ -64,7 +62,6 @@ export default function EnrollmentForm() {
   }, []);
 
   const handleInputChange = (field: keyof FormData, value: string) => {
-    // Special handling for track selection - make it a single item array
     if (field === "interestedTracks") {
       setFormData((prev) => ({ ...prev, [field]: [value] }));
     } else {
@@ -105,65 +102,50 @@ export default function EnrollmentForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    try {
-      const response = await fetch("https://formspree.io/f/xpqwvjav", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        console.log("Form submitted successfully:", formData);
-        
-        // Store application data in sessionStorage for payment page
-        sessionStorage.setItem('applicationData', JSON.stringify({
-          email: formData.email,
-          fullName: formData.fullName,
-          track: formData.interestedTracks[0] || "Software Engineering"
-        }));
-        
-        // Redirect to payment page
-        router.push("/payment");
-      } else {
-        console.error("Form submission failed");
-        alert("Failed to submit form. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("An error occurred. Please try again.");
+    // Validate required fields
+    if (!formData.fullName || !formData.email) {
+      alert("Please fill in all required fields");
+      return;
     }
+
+    // Store complete form data in sessionStorage (NOT in database)
+    // This data will be submitted to Formspree ONLY after payment confirmation
+    sessionStorage.setItem('enrollmentFormData', JSON.stringify(formData));
+    
+    // Store minimal data needed for payment
+    sessionStorage.setItem('applicationData', JSON.stringify({
+      email: formData.email,
+      fullName: formData.fullName,
+      track: formData.interestedTracks[0] || "Software Engineering"
+    }));
+    
+    console.log("Form data saved locally. Redirecting to payment...");
+    
+    // Redirect to payment page (form NOT submitted yet)
+    router.push("/payment");
   };
 
   return (
     <section className="relative w-full flex flex-col md:flex-row">
-      {/* Left Side - Background Slider (Desktop/Tablet only) */}
       <BackgroundSlider
         currentSlide={currentSlide}
         onSlideChange={setCurrentSlide}
       />
 
-      {/* Right Side - Form Container */}
       <div className="w-full md:w-1/2 lg:w-1/2 flex items-center justify-center p-6 md:p-8 lg:p-12 md:bg-white relative">
         <div className="md:hidden absolute inset-0">
-        {/* Background image */}
-        <img
+          <img
             src="/images/enrollment-bg.jpeg"
             alt="Community"
             className="w-full h-full object-cover"
-        />
-
-        {/* Black overlay */}
-        <div
+          />
+          <div
             className="absolute inset-0"
             style={{ backgroundColor: '#00030CCC' }}
-        />
+          />
         </div>
 
-        {/* Form Content */}
         <div className="relative z-10 w-full max-w-md p-8 md:p-0 my-8">
-          {/* Header */}
           <div className="flex justify-between items-center mt-10 mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-white md:text-gray-900">
               Let's get you boarded
@@ -189,7 +171,6 @@ export default function EnrollmentForm() {
             </button>
           </div>
 
-          {/* Step 1 - Personal Information */}
           {currentStep === 1 && (
             <FormStep1
               formData={formData}
@@ -199,7 +180,6 @@ export default function EnrollmentForm() {
             />
           )}
 
-          {/* Step 2 - Additional Information */}
           {currentStep === 2 && (
             <FormStep2
               formData={formData}
