@@ -103,7 +103,7 @@ export default function CallbackPage() {
   const [verificationAttempts, setVerificationAttempts] = useState(0);
   const [submissionError, setSubmissionError] = useState<string | null>(null);
 
-  const BACKEND_URL = "https://oni-backend-zszu.onrender.com";
+  const BACKEND_URL = "https://oni-backend-dudi.onrender.com";
   const FORMSPREE_URL = "https://formspree.io/f/xpqwvjav";
   const MAX_ATTEMPTS = 3;
   const VERIFICATION_TIMEOUT = 30000;
