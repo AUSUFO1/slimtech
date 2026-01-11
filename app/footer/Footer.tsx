@@ -132,7 +132,7 @@ export default function Footer() {
               <h4 className="text-base font-semibold">SOCIALS</h4>
               <ul className="space-y-3 text-sm text-white">
                 <li>
-                  <a href="https://x.com/jcode_Code" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors">
+                  <a href="https://x.com/SlimMentorship" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors">
                     X (Twitter)
                   </a>
                 </li>
