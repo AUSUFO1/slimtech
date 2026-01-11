@@ -19,8 +19,8 @@ export default function PaymentPage() {
   const [copied, setCopied] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const BACKEND_URL = "https://oni-backend-dudi.onrender.com"; 
-  const PAYMENT_AMOUNT = 99000; 
+  const BACKEND_URL = "https://oni-backend-zszu.onrender.com"; 
+  const PAYMENT_AMOUNT = 10; 
 
   useEffect(() => {
     const storedData = sessionStorage.getItem('applicationData');
