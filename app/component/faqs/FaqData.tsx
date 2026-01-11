@@ -31,10 +31,6 @@ export const faqs = [
       "Slim Mentorship is mentorship-first. Instead of focusing only on recorded lessons, we emphasize guided practice, feedback, accountability, and real execution. You’re not just consuming content but building, refining, and improving with support from experienced mentors.",
   },
   {
-question: "Is there a refund policy?",
-    answer:
-      "Yes. Slim Mentorship offers a limited refund window at the start of the program. If you determine early on that the program isn’t the right fit, you may request a refund within the specified period. Full details are shared during enrollment to ensure clarity and transparency.",
-  }, {
 question: "Will this guarantee me a job?",
     answer:
       "Slim Mentorship does not promise jobs. What we provide is mentorship, practical experience, and skill development that prepares you for real opportunities. Outcomes depend on your engagement, consistency, and how effectively you apply what you learn.",

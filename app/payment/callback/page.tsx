@@ -19,7 +19,7 @@ function PaymentSuccess({ onClose }: PaymentSuccessProps) {
         Payment Successful
       </h2>
 
-      <p className="text-xl md:text-4xl font-bold text-gray-9=700 my-6 px-4">
+      <p className="text-xl md:text-4xl font-bold text-gray-700 my-6 px-4">
         Welcome Onboard • Fasten Your Seatbelt
       </p>
 

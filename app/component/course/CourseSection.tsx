@@ -16,7 +16,7 @@ export default function CourseTracksSection() {
     { title: "UI/UX DESIGN", image: "/images/courses/uiux.jpeg" },
     { title: "BACKEND ENGINEERING", image: "/images/courses/backend.jpeg", isCenterCard: true },
     { title: "DATA ANALYTICS", image: "/images/courses/data-analytics.jpeg" },
-    { title: "VIRTUAL ASSISTANCE", image: "/images/courses/virtual-assistance.jpeg" },
+    { title: "DIGITAL MARKETING", image: "/images/courses/virtual-assistance.jpeg" },
     { title: "MOBILE APP DEVELOPMENT", image: "/images/courses/mobile.jpeg" },
   ];
 
@@ -49,7 +49,7 @@ export default function CourseTracksSection() {
             // Add negative margin-top for specific cards on large screens
             const isUIUX = course.title === "UI/UX DESIGN";
             const isDataAnalytics = course.title === "DATA ANALYTICS";
-            const isVirtualAssistance = course.title === "VIRTUAL ASSISTANCE";
+            const isVirtualAssistance = course.title === "DIGITAL MARKETING";
             
             let additionalClasses = "";
             if (isMobileApp) {

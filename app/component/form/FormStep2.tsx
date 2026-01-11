@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Select from "react-select";
 
 interface FormData {
@@ -29,6 +30,11 @@ export default function FormStep2({
     { value: "yes", label: "Yes" },
     { value: "no", label: "No" }
   ];
+
+  // Auto-scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const handleTrackSelection = (track: string) => {
     // Clear all tracks and set only the selected one
