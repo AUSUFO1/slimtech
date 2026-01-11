@@ -208,7 +208,7 @@ export default function FormStep2({
 
       {/* Navigation Buttons */}
       <div className="space-y-4">
-        <button
+        {/* <button
           type="button"
           onClick={(e) => {
             e.preventDefault();
@@ -217,7 +217,7 @@ export default function FormStep2({
           className="w-auto min-w-99px h-125px px-7 py-3 bg-accent-yellow text-white rounded-full font-medium hover:bg-[#e5a520] transition-colors"
         >
           Get onboard!
-        </button>
+        </button> */}
         <button
           type="button"
           onClick={onBack}
