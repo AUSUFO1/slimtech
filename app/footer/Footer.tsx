@@ -108,7 +108,7 @@ export default function Footer() {
 
         {/* BOTTOM SECTION - Footer Links */}
         <div className="border-t border-gray-700 py-8 sm:py-10 lg:py-3 lg:-mt-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:py-8 gap-8 lg:gap-12 xl:gap-16 text-white lg:max-w-225 xl:max-w-250">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:py-8 gap-8 lg:gap-12 xl:gap-16 text-white lg:max-w-225 xl:max-w-250">
             
             {/* Logo Column */}
             <div className="space-y-2">
@@ -120,17 +120,7 @@ export default function Footer() {
               <h4 className="text-base font-semibold">SUPPORT</h4>
               <ul className="space-y-3 text-sm text-white">
                 <li>
-                  <a href="#" className="hover:text-brand-cyan transition-colors">
-                    FAQs
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-brand-cyan transition-colors">
-                    Contact us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-brand-cyan transition-colors">
+                  <a href="/privacy" className="hover:text-brand-cyan transition-colors">
                     Privacy policy
                   </a>
                 </li>
@@ -142,25 +132,8 @@ export default function Footer() {
               <h4 className="text-base font-semibold">SOCIALS</h4>
               <ul className="space-y-3 text-sm text-white">
                 <li>
-                  <a href="#" className="hover:text-brand-cyan transition-colors">
+                  <a href="https://x.com/jcode_Code" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors">
                     X (Twitter)
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Get Started Column */}
-            <div className="space-y-4">
-              <h4 className="text-base font-semibold">GET STARTED</h4>
-              <ul className="space-y-3 text-sm text-white">
-                <li>
-                  <a href="#" className="hover:text-brand-cyan transition-colors">
-                    Signup
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-brand-cyan transition-colors">
-                    Sign in
                   </a>
                 </li>
               </ul>

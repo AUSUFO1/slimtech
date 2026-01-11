@@ -36,6 +36,13 @@ question: "Will this guarantee me a job?",
       "Slim Mentorship does not promise jobs. What we provide is mentorship, practical experience, and skill development that prepares you for real opportunities. Outcomes depend on your engagement, consistency, and how effectively you apply what you learn.",
   },
   {
+question: "No refund policy?",
+    answer:
+      "All payment made to Slim Tech Mentorship School are final and non-refundable. Once a student enrolls in any program, course, mentorship, training, or service offered by Silm Tech Mentoship School, no refunds, cancellations or reversals will be issued under any circumstances. ",
+      
+  },
+  
+  {
 question: "How do I get started?",
     answer:
       "You can get started by applying through the enrollment page. Once accepted, you’ll receive onboarding details, access to learning resources, and guidance on how to prepare for your first mentorship session.",
