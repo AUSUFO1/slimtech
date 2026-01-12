@@ -104,7 +104,7 @@ export default function CallbackPage() {
   const [submissionError, setSubmissionError] = useState<string | null>(null);
 
   const BACKEND_URL = "https://oni-backend-zszu.onrender.com";
-  const FORMSPREE_URL = "https://formspree.io/f/xpqwvjav";
+  const FORMSPREE_URL = "https://formspree.io/f/xgooewrb";
   const MAX_ATTEMPTS = 3;
   const VERIFICATION_TIMEOUT = 30000;
 

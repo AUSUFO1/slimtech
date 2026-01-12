@@ -21,7 +21,7 @@ export default function Footer() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/xpqwvjav", {
+      const response = await fetch("https://formspree.io/f/xgooewrb", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
