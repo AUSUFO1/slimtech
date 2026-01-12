@@ -141,8 +141,9 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="mt-8 pt-6 text-center text-sm text-white">
-            © 2026 Slim Mentorship. All rights reserved
+          <div className="mt-8 pt-6 text-center text-sm text-white space-y-2">
+            <div>© 2026 Slim Mentorship. All rights reserved</div>
+            <div className="text-gray-400">Powered by Toksnet</div>
           </div>
         </div>
 
