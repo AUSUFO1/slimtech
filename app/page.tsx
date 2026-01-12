@@ -13,7 +13,7 @@ export default function SplashPage() {
 
   useEffect(() => {
     // Target date: January 12, 2026 at 12:00 AM (midnight)
-    const targetDate = new Date('2026-01-12T00:00:00').getTime()
+    const targetDate = new Date('2026-01-14T00:00:00').getTime()
 
     const calculateCountdown = () => {
       const now = new Date().getTime()
