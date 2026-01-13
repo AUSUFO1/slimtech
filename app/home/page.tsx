@@ -4,7 +4,7 @@ import OfferSection from "../component/offer/OfferSection";
 import CourseTracksSection from "../component/course/CourseSection";
 import ProgramSection from "../component/program/ProgramSection";
 import FaqSection from "../component/faqs/FaqSection";
-import Footer from "../footer/Footer";
+import Footer from "../component/footer/Footer";
 export default function Home() {
   return (
     <main className="w-full min-h-screen">

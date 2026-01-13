@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import FooterIllustration from "./FooterIllustration"; 
-import Logo from "../component/icon/Logo";
-import LogoSmall from "../component/icon/LogoSmall";
-import Button from "../component/common/Button";
+import Logo from "../icon/Logo";
+import LogoSmall from "../icon/LogoSmall";
+import Button from "../common/Button";
 
 export default function Footer() {
   const [email, setEmail] = useState("");

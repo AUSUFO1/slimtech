@@ -20,7 +20,7 @@ export default function PaymentPage() {
   const [isProcessing, setIsProcessing] = useState(false);
 
   const BACKEND_URL = "https://oni-backend-zszu.onrender.com";
-  const PAYMENT_AMOUNT = 10;
+  const PAYMENT_AMOUNT = 99000;
 
   /* SCROLL TO TOP ON PAGE LOAD */
   useEffect(() => {

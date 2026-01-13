@@ -1,6 +1,6 @@
 "use client";
-import Footer1 from "../component/icon/Footer1";
-import Footer2 from "../component/icon/Footer2";
+import Footer1 from "../icon/Footer1";
+import Footer2 from "../icon/Footer2";
 
 export default function FooterIllustration() {
   return (
